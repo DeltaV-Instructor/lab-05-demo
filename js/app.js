@@ -35,7 +35,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+  console.log('in the multiply function', a, b);
+  let totalMulti = a * b;
+  let message = 'The product of ' + a + ' and ' + b + ' is ' + totalMulti + '.';
+  return [totalMulti, message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
