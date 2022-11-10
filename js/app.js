@@ -21,7 +21,7 @@ function sum(a, b) { //eslint-disable-line
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -42,7 +42,7 @@ function multiply(a, b) { //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 //Don't forget to create a new branch for your work on the next question!
@@ -68,13 +68,13 @@ and when you think it is finished, uncomment the call for the testSumAndMultiply
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  console.log('in the sum and multiply function', a, b, c);
-  sum(a, b, c);
-  multiply(a, b, c);
-  let message1 = a + ' and ' + b + ' and ' + c + ' sum to ' + sum + '.';
-  let message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply + ' .';
-  return[sum, multiply, message1, message2];
+  let sumNumber = sum(sum(a, b)[0], c)[0];
+  let productNumber = multiply(multiply(a, b)[0], c)[0];
+  let message1 = `${a} and ${b} and ${c} sum to ${sumNumber}.`;
+  let message2 = `The product of ${a} and ${b} and ${c} is ${productNumber}.`;
+  return[sumNumber, productNumber, message1, message2];
 }
+
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
